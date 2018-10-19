@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:spring="http://xmlns.jcp.org/xml/ns/javaee">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Add Category:<br>
+<spring:from action="/addCategory"method="post" modelAttribute="category"> </spring:from><spring:label>
+    <spring:label path="name"Name:</spring:label>
+<spring:input path="name"></spring:input>
+
+<input type="sumbit"value="ADD">
+<br>
+Add Brand:<br>
+<spring:from action="/addBrand"method="post" modelAttribute="brand"> </spring:from><spring:label>
+    <spring:label path="name"Name:</spring:label>
+<spring:input path="name"></spring:input>
+
+<input type="sumbit"value="ADD">
+<br>
+Add Product:<br>
+<spring:from action="/addProduct"method="post" modelAttribute="product"> </spring:from><spring:label>
+    <spring:label path="name"Name:</spring:label>
+<spring:input path="description"></spring:input>
+<spring:label path="name"Description:</spring:label>
+
+<spring:textarea path="description"></spring:textarea>
+<spring:label path="price"Price:</spring:label>
+<spring:input path="price"></spring:input>
+<spring:select path="category" items="${allCategories}"itemLabel="name">
+<input type="sumbit"value="ADD">
+<br>
+</body>
+</html>

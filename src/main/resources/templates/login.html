@@ -1,0 +1,136 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Մուտք | ShopHayone</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/home/icon.jpg">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+
+<body>
+<header id="header"><!--header-->
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 d-flex">
+                    <div class="logo pull-left">
+                        <a href="/" class="d-flex"><img src="images/home/icon.jpg" alt="" style="width: 25%" /><h2>ShopHayone</h2></a>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-user"></i> Հաշիվը</a></li>
+                            <li><a href="#"><i class="fa fa-star"></i> Ցանկություն</a></li>
+                            <li><a href="404.html"><i class="fa fa-crosshairs"></i>Ստուգում</a></li>
+                            <li><a href="404.html"><i class="fa fa-shopping-cart"></i>Զամբյուղ</a></li>
+                            <li><a href="/loginPage"><i class="fa fa-lock"></i> Մուտք</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-middle-->
+
+    <div class="header-bottom"><!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="/" class="active">Գլխավոր</a></li>
+                            <li class="dropdown"><a href="#">Խանութ<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="404.html">Ապրանքներ</a></li>
+                                    <li><a href="404.html">Ապրանքի մանրամասերը</a></li>
+                                    <li><a href="404.html">Ստուգում</a></li>
+                                    <li><a href="404.html">Զամբյուղ</a></li>
+                                    <li><a href="/loginPage">Մուտք</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact-us.html">Կապ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="search_box pull-right">
+                        <input type="text" placeholder="Որոնել"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
+</header><!--/header-->
+
+<section id="form"><!--form-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-1">
+                <div class="login-form"><!--login form-->
+                    <h2>Մուտք գորցել իմ էջ</h2>
+                    <form action="/signIn" method="post">
+                        <input type="email" name="email" placeholder="Անուն" />
+                        <input type="password" name="password" placeholder="Էլ-հասցե" />
+                        <span>
+								<input type="checkbox" class="checkbox">
+								Հիշել
+							</span>
+                        <button type="submit" class="btn btn-default">Մուտք</button>
+                    </form>
+                </div><!--/login form-->
+            </div>
+            <div class="col-sm-1">
+                <h2 class="or">Կամ</h2>
+            </div>
+            <div class="col-sm-4">
+                <div class="signup-form"><!--sign up form-->
+                    <h2>Ստեխծել նոր էջ!</h2>
+                    <form action="/user/signUp" method="post">
+                        <input type="text" name="name" placeholder="Անուն"/>
+                        <input type="email" name="email" placeholder="Էլ-հասցե"/>
+                        <input type="password" name="password" placeholder="Գախտնաբառ"/>
+                        <button type="submit" class="btn btn-default">Հաստատել</button>
+                    </form>
+                </div><!--/sign up form-->
+            </div>
+        </div>
+    </div>
+</section><!--/form-->
+
+<script src="js/jquery.js"></script>
+<script src="js/price-range.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
